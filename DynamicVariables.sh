@@ -2,4 +2,4 @@
 
 TODAY_DATE="$(date +%F)
 
-echo "Good Morning, Today's Date is ${TODAY_DATE}"
+echo "Good Morning, Todays Date is ${TODAY_DATE}"

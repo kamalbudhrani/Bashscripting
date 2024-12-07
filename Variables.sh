@@ -4,6 +4,7 @@
 
 a=10
 b=20
+c=100
 
 # No concept of data types in shell-scripting
 # Everything is considered as string by default
@@ -12,6 +13,8 @@ echo $a
 echo ${a}
 echo "$a"
 echo "${b}"
+
+echo "Print the value of c = $c"
 
 echo '$(a)'
 

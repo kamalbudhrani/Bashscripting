@@ -22,3 +22,4 @@
 # Syntax : echo -e "\e[32m Your Text \e[0m"
 
 echo -e "\e[32;41m My name is Kamal \e[0m"
+echo -e "\e[95;103m My son name is Vihaan \e[0m"

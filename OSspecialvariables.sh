@@ -2,9 +2,9 @@
 
 # Special variables in linux are : $0 to $n , $* , $# , $@ , $$
 
-echo $0 # Prints the script name that you are running
-echo $1 # Prints First argument from command line
-echo $2 # Prints Second argument from command line
+echo $0     # Prints the script name that you are running
+echo $1     # Prints First argument from command line
+echo $2     # Prints Second argument from command line
 
 echo $*     # Gives you all the arguments used in the script
 echo $@     # Gives you all the arguments used in the script

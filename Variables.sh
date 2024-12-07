@@ -21,3 +21,4 @@ echo '$(a)'
 
 # Whenever you use single quotes on variable, the power of special character will be taken down
 # Here $ is a special character to print variables.
+# Local variables will have higher priority than export variables (Environment Variables)

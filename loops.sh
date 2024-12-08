@@ -3,7 +3,7 @@
 # Loops based on inputs, for loop is the option
 
 for games in Cricket Hockey Football Tennis Chess; do
-    echo "Game name is ${games}
+    echo "Game name is ${games}"
 done
 
 # Loops based on conditions, use While Loop

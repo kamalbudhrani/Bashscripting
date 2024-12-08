@@ -9,6 +9,7 @@ echo $$     # Gives you the PID of the current process
 echo $*     # Gives you all the arguments used in the script
 echo $@     # Gives you all the arguments used in the script
 echo $#     # Gives you the number of arguments used
+echo $?     # Gives you the exit code of the previous command
 
 # On command you can supply 9 variables
 # Example : sh abc.sh 10 20 30 40

@@ -7,8 +7,7 @@
 # opt2) commands ;;
 # esac
 
-read -p 'Enter your oprion :' Option
-$Action < $Option
+Action=$1
 
 case $Action in
 

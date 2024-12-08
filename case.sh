@@ -7,8 +7,6 @@
 # opt2) commands ;;
 # esac
 
-Action=$1
-
 read -p 'Enter your oprion :' Option
 $Action < $Option
 

@@ -9,10 +9,11 @@
 
 Action=$1
 
-case $Action in
-
 read -p 'Enter your oprion :' Option
 $Option > $Action
+
+case $Action in
+
 
 start)
     echo "Starting the service"

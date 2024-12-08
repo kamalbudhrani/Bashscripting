@@ -7,5 +7,5 @@ sample() {
 }
 
 # Calling function sample
-sample
+
 

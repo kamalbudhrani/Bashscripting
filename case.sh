@@ -10,7 +10,7 @@
 Action=$1
 
 read -p 'Enter your oprion :' Option
-$Option > $Action
+$Action<$Option
 
 case $Action in
 

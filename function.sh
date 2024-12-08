@@ -16,4 +16,5 @@ stat() {
     sample   # Calling sample function inside stat function
 }
 
+# Calling stat function
 stat

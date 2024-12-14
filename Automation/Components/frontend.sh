@@ -38,7 +38,7 @@ echo -n "Unzipping the $COMPONENT..."
     unzip /tmp/$COMPONENT.zip &>> LOGFILE
 stat $?
 mv $COMPONENT-main/* .
-mv static/*
+mv static/* .
 rm -rf $COMPONENT-main Readme.md &>> $LOGFILE
 
 echo -n "Configuring the reverse proxy file..."

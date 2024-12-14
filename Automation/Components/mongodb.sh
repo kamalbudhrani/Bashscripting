@@ -8,7 +8,7 @@ set -e                          # This is used to break/stop the script executio
  source common.sh     # source is used to call the functions or expressions declared outside this script, like for this stat function and root priviledge expression are declared in common.sh script which is present outside this script inside Components folder, whatever functions or expressions declared in common.sh will be called when we use source command
 
  echo -n "Configuring the repository..."
-    curl -s -o /etc/yum.repos.d/$COMPONENT.repo https://repo.mongodb.org/yum/amazon/2023/mongodb-org/8.0/x86_64/RPMS/mongodb-org-server-8.0.4-1.amzn2023.x86_64.rpm
+    curl -s -o /etc/yum.repos.d/$COMPONENT.repo https://repo.mongodb.org/yum/amazon/2023/mongodb-org/8.0/$basearch/
  stat $?
 
  #echo -n "Installing $COMPONENT..."

@@ -32,8 +32,8 @@ echo -n "Injecting the Schema..."
     cd /tmp
     unzip -o mongodb.zip &>> $LOGFILE
     cd mongodb-main
-    mongo < catalogue.js &>> $LOGFILE
-    mongo < users.js &>> $LOGFILE
+    mongosh < catalogue.js &>> $LOGFILE
+    mongosh < users.js &>> $LOGFILE
 stat $?
 
 # What I am planning to have?

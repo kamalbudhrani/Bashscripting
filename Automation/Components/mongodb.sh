@@ -11,9 +11,9 @@ set -e                          # This is used to break/stop the script executio
     curl -s -o /etc/yum.repos.d/$COMPONENT.repo https://repo.mongodb.org/yum/amazon/2023/mongodb-org/8.0/x86_64/RPMS/mongodb-org-server-8.0.4-1.amzn2023.x86_64.rpm
  stat $?
 
- echo -n "Installing $COMPONENT..."
-    yum install mongodb-org -y &>> $LOGFILE
-stat $?
+ #echo -n "Installing $COMPONENT..."
+ #   yum install mongodb-org -y &>> $LOGFILE
+#stat $?
 
 echo -n "Updating the mongodb configuration..."
     sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf   # The SED (Stream Editor) command in Unix/Linux is a powerful utility used to process and manipulate text in files. It can perform a variety of operations such as searching, find-and-replace, insertion, deletion, and more, without the need to open the file in an editor. This makes it a highly efficient tool for managing and editing text, especially when working with large files or automating tasks in scripts.

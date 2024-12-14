@@ -7,13 +7,13 @@ set -e                          # This is used to break/stop the script executio
 
  source common.sh     # source is used to call the functions or expressions declared outside this script, like for this stat function and root priviledge expression are declared in common.sh script which is present outside this script inside Components folder, whatever functions or expressions declared in common.sh will be called when we use source command
 
- echo -n "Configuring the repository..."
-    curl -s -o /etc/yum.repos.d/$COMPONENT.repo https://raw.githubusercontent.com/stans-robot-project/$COMPONENT/main/mongo.repo
- stat $?
+#  echo -n "Configuring the repository..."
+#     curl -s -o /etc/yum.repos.d/$COMPONENT.repo https://raw.githubusercontent.com/stans-robot-project/$COMPONENT/main/mongo.repo
+#  stat $?
 
- echo -n "Installing $COMPONENT..."
-    yum install mongodb-org -y &>> $LOGFILE
-stat $?
+#  echo -n "Installing $COMPONENT..."
+#     yum install mongodb-org -y &>> $LOGFILE
+# stat $?
 
 echo -n "Updating the mongodb configuration..."
     sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf   # The SED (Stream Editor) command in Unix/Linux is a powerful utility used to process and manipulate text in files. It can perform a variety of operations such as searching, find-and-replace, insertion, deletion, and more, without the need to open the file in an editor. This makes it a highly efficient tool for managing and editing text, especially when working with large files or automating tasks in scripts.

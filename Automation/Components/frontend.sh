@@ -22,7 +22,7 @@ stat() {
 }
 
 echo -n "Installing Nginix..."
-    yum install nginx -y &>> $LOGFILE
+    yum instal nginx -y &>> $LOGFILE
     stat $?                         # Calling stat function which is declared above and $? will display the status (Success or failed) of the last command executed
 
 echo -n "Downloading the component..."

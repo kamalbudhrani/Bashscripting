@@ -13,11 +13,12 @@ if [ $USERID -ne 0 ] ; then
 fi
 
 # This function is created to avoid repetative coding for same action, here same action is to print success or failure of every command
-stat()
+stat() {
     if [ $1 -eq 0 ] ; then
         echo -e "\e[32m Success \e[0m"
     else
         echo -e "\e[31m Failed \e[0m"
+}
 
 echo -n "Installing Nginix..."
     yum install nginx -y &>> $LOGFILE

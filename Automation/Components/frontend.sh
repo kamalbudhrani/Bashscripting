@@ -31,6 +31,7 @@ echo -n "Downloading the component..."
 
 echo -n "Performing Cleanup..."
     rm -rf /usr/share/nginx/html/* &>> $LOGFILE
+    stat $?
 
 cd /usr/share/nginx/html
 echo -n "Unzipping the $COMPONENT..."

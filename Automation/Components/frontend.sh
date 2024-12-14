@@ -2,24 +2,8 @@
 
 set -e                          # This is used to break/stop the script execution if any command in the script does not complete with success
 COMPONENT=frontend
-LOGFILE=/tmp/$COMPONENT.log
 
-# Veirfy the script is being executed with root user or not
-USERID=$(id -u)
-
-if [ $USERID -ne 0 ] ; then
-    echo -e "\e[31m You must run this script as root user or with sudo priviledges \e[0m"
-    exit 1
-fi
-
-# This function is created to avoid repetative coding for same action, here same action is to print success or failure of every command
-stat() {
-    if [ $1 -eq 0 ] ; then
-        echo -e "\e[32m Success \e[0m"
-    else
-        echo -e "\e[31m Failed \e[0m"
-    fi
-}
+source Components/common.sh     # source is used to call the functions or expressions declared outside this script, like for this stat function and root priviledge expression are declared in common.sh script which is present outside this script inside Components folder, whatever functions or expressions declared in common.sh will be called when we use source command
 
 echo -n "Installing Nginix..."
     yum install nginx -y &>> $LOGFILE

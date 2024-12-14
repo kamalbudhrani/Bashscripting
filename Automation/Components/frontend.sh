@@ -3,7 +3,7 @@
 set -e                          # This is used to break/stop the script execution if any command in the script does not complete with success
 COMPONENT=frontend
 
-source Components/common.sh     # source is used to call the functions or expressions declared outside this script, like for this stat function and root priviledge expression are declared in common.sh script which is present outside this script inside Components folder, whatever functions or expressions declared in common.sh will be called when we use source command
+source common.sh     # source is used to call the functions or expressions declared outside this script, like for this stat function and root priviledge expression are declared in common.sh script which is present outside this script inside Components folder, whatever functions or expressions declared in common.sh will be called when we use source command
 
 echo -n "Installing Nginix..."
     yum install nginx -y &>> $LOGFILE

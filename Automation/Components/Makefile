@@ -3,3 +3,6 @@ frontend:
 
 mongodb:
 	bash mongodb.sh
+
+catalogue:
+	bash mongodb.sh

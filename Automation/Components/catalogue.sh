@@ -30,7 +30,7 @@ unzip -o /tmp/catalogue.zip &>> $LOGFILE
 stat $?
 
 echo -n "Performing Cleanup ..."
-rm -rf 
+rm -rf $COMPONENT
 mv $COMPONENT-main $COMPONENT
 stat $?
 

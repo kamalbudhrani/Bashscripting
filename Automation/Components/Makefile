@@ -5,4 +5,4 @@ mongodb:
 	bash mongodb.sh
 
 catalogue:
-	bash mongodb.sh
+	bash catalogue.sh

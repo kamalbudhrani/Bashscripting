@@ -43,3 +43,14 @@ echo -n "Changing permissions to $APPUSER ..."
 chown -R $APPUSER:$APPUSER /home/roboshop/$COMPONENT
 stat $?
 
+echo -n "Configuring $COMPONENT Service ..."
+sed -i -e 's/MONGO_DNSNAME/mongodb.robot.internal/' /home/roboshop/$COMPONENT/systemd.service
+mv /home/$APPUSER/$COMPONENT/systemd.service /etc/systemd/system/$COMPONENT.service
+stat $?
+
+echo -n "Starting $COMPONENT Service ..."
+systemctl daemon-reload &>> $LOGFILE
+systemctl start $COMPONENT &>> $LOGFILE
+stat $?
+
+echo -e "\e[32m __________$COMPONENT Installation Completed Successfully_____________\e[0m"
